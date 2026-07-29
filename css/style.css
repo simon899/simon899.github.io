@@ -1,4 +1,4 @@
-/* ===================================================
+﻿/* ===================================================
    董阴请长笸策 - 图田样式表
    =================================================== */
 :root {
@@ -303,4 +303,16 @@ body {
   .post-content { font-size: 1rem; }
   .post-item { padding: 18px 20px; }
   .about-section { padding: 24px; }
+}
+
+.giscus-wrapper {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--color-border);
+}
+.comment-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--color-text);
 }
