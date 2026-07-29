@@ -12,7 +12,23 @@
   <meta property="og:site_name" content="选矿试验笔记">
   <title>选矿是什么？选矿到底是一个什么概念？ - 选矿试验笔记</title>
   <link rel="stylesheet" href="../css/style.css">
-</head>
+  <!-- GoatCounter page view tracker -->
+  <script data-goatcounter="https://simon899.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script>
+    // Display page view count on posts
+    document.addEventListener('DOMContentLoaded', function() {
+      var el = document.getElementById('pageview-count');
+      if (el) {
+        var path = window.location.pathname;
+        var api = 'https://simon899.goatcounter.com/counter/' + encodeURIComponent(path) + '.json';
+        fetch(api, {mode: 'cors'})
+          .then(function(r) { return r.json(); })
+          .then(function(d) { el.textContent = d.count || 0; })
+          .catch(function() { el.textContent = '--'; });
+      }
+    });
+  </script>
+
 <body>
 <header class="site-header">
   <div class="header-inner">
@@ -46,8 +62,11 @@
 <footer class="site-footer">
   <p>&copy; 2026 选矿工程师笔记. All rights reserved.</p>
 
-</footer>
+<div class="pageview-counter">阅读量: <span id="pageview-count">--</span> 次</div>
+
+
 </body>
 </html>
+
 
 
