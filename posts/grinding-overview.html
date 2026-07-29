@@ -12,20 +12,7 @@
   <meta property="og:site_name" content="选矿试验笔记">
   <title>破碎与磨矿概述 - 破碎比是什么概念 - 选矿试验笔记</title>
   <link rel="stylesheet" href="../css/style.css">
-    <script data-goatcounter="https://simon899.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var el = document.getElementById('pageview-count');
-      if (el) {
-        var path = window.location.pathname;
-        var api = 'https://simon899.goatcounter.com/counter' + path + '.json';
-        fetch(api, {mode: 'cors'})
-          .then(function(r) { if (r.ok || r.status === 404) return r.json(); throw Error(); })
-          .then(function(d) { el.textContent = d.count || 0; })
-          .catch(function() { el.textContent = '--'; });
-      }
-    });
-  </script>
+    `<script data-goatcounter="https://simon899.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 <body>
 <header class="site-header">
@@ -41,6 +28,13 @@
     <div class="breadcrumb"><a href="../index.html">首页</a> / 文章</div>
     <h1>破碎与磨矿概述 - 破碎比是什么概念</h1>
     <div class="post-meta">2026年7月</div>
+  
+  <div class="post-meta-bar">
+    <span class="post-meta"></span>
+    <span class="post-stats">
+      <span class="stat-item">👁 <span id="view-count">--</span> 次阅读</span>
+    </span>
+  </div>
   </article>
   <div class="post-content">
 <p>在选矿工艺流程中，破碎和磨矿是最先开始的工序。</p>
@@ -59,14 +53,27 @@
 
 <p>⊁多碎少磨是选矿厂设计中的重要原则。</p>
   </div>
+
+<div class="comment-section">
+  <h2 class="comment-heading" id="comment-count-header">评论 (0)</h2>
+  <div class="comment-form">
+    <input type="text" id="comment-name" placeholder="你的名字（选填）" class="comment-input-name">
+    <textarea id="comment-text" placeholder="写下你的评论..." class="comment-textarea" rows="3"></textarea>
+    <button id="comment-btn" onclick="submitComment()" class="comment-btn">发表评论</button>
+  </div>
+  <div id="comment-list" class="comment-list">
+    <p class="no-comments" style="color:var(--color-text-muted);font-size:0.9rem;">还没有评论，来写第一条吧。</p>
+  </div>
+</div>
+
 <footer class="site-footer">
   <p>&copy; 2026 选矿工程师笔记. All rights reserved.</p>
 
-<div class="pageview-counter">阅读量: <span id="pageview-count">--</span> 次</div>
-
-
+<script src="../js/comments.js"></script>
 </body>
 </html>
+
+
 
 
 
