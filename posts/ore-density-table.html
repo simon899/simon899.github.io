@@ -21,17 +21,15 @@
     .density-table .section-row:hover { background: #dce6f0; }
     .high-density { color: #c0392b; font-weight: bold; }
   </style>
-  <!-- GoatCounter page view tracker -->
-  <script data-goatcounter="https://simon899.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://simon899.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <script>
-    // Display page view count on posts
     document.addEventListener('DOMContentLoaded', function() {
       var el = document.getElementById('pageview-count');
       if (el) {
         var path = window.location.pathname;
-        var api = 'https://simon899.goatcounter.com/counter/' + encodeURIComponent(path) + '.json';
+        var api = 'https://simon899.goatcounter.com/counter' + path + '.json';
         fetch(api, {mode: 'cors'})
-          .then(function(r) { return r.json(); })
+          .then(function(r) { if (r.ok || r.status === 404) return r.json(); throw Error(); })
           .then(function(d) { el.textContent = d.count || 0; })
           .catch(function() { el.textContent = '--'; });
       }
@@ -147,6 +145,7 @@
 
 </body>
 </html>
+
 
 
 
