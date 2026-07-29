@@ -12,20 +12,7 @@
   <meta property="og:site_name" content="选矿试验笔记">
   <title>选矿试验笔记 - 选矿试验笔记</title>
   <link rel="stylesheet" href="/css/style.css">
-    <script data-goatcounter="https://simon899.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var el = document.getElementById('pageview-count');
-      if (el) {
-        var path = window.location.pathname;
-        var api = 'https://simon899.goatcounter.com/counter' + path + '.json';
-        fetch(api, {mode: 'cors'})
-          .then(function(r) { if (r.ok || r.status === 404) return r.json(); throw Error(); })
-          .then(function(d) { el.textContent = d.count || 0; })
-          .catch(function() { el.textContent = '--'; });
-      }
-    });
-  </script>
+    `<script data-goatcounter="https://simon899.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 <body>
 <header class="site-header">
@@ -51,7 +38,11 @@
         <div class="post-excerpt">整理30种常见矿石矿物的密度数据，附化学式、硬度和主要选矿方法。</div>
         <div class="post-tags"><span class="tag">基础数据</span></div>
       </a>
-    </li>
+    
+    <div class="post-item-stats">
+      <span>👁 <span class="pv-ore-density-table">--</span> 次</span>
+      <span>💬 <span class="cm-ore-density-table">--</span> 条评论</span>
+    </div></li>
 
     <li class="post-item">
       <a href="posts/what-is-mineral-processing.html">
@@ -60,7 +51,11 @@
         <div class="post-excerpt">1分钟带你了解选矿的基本概念。</div>
         <div class="post-tags"><span class="tag">基础知识</span></div>
       </a>
-    </li>
+    
+    <div class="post-item-stats">
+      <span>👁 <span class="pv-what-is-mineral-processing">--</span> 次</span>
+      <span>💬 <span class="cm-what-is-mineral-processing">--</span> 条评论</span>
+    </div></li>
     <li class="post-item">
       <a href="posts/common-ores.html">
         <div class="post-meta">2026年7月 | 文章</div>
@@ -68,7 +63,11 @@
         <div class="post-excerpt">了解不同类型矿石的选别特点。</div>
         <div class="post-tags"><span class="tag">矿石类型</span></div>
       </a>
-    </li>
+    
+    <div class="post-item-stats">
+      <span>👁 <span class="pv-common-ores">--</span> 次</span>
+      <span>💬 <span class="cm-common-ores">--</span> 条评论</span>
+    </div></li>
     <li class="post-item">
       <a href="posts/grinding-overview.html">
         <div class="post-meta">2026年7月 | 文章</div>
@@ -76,7 +75,11 @@
         <div class="post-excerpt">破碎和磨矿在选矿工艺中的基础知识。</div>
         <div class="post-tags"><span class="tag">破碎磨矿</span></div>
       </a>
-    </li>
+    
+    <div class="post-item-stats">
+      <span>👁 <span class="pv-grinding-overview">--</span> 次</span>
+      <span>💬 <span class="cm-grinding-overview">--</span> 条评论</span>
+    </div></li>
     <li class="post-item">
       <a href="posts/reading-list.html">
         <div class="post-meta">2026年7月 | 文章</div>
@@ -84,15 +87,43 @@
         <div class="post-excerpt">选矿入门推荐读物。</div>
         <div class="post-tags"><span class="tag">读书推荐</span></div>
       </a>
-    </li>
+    
+    <div class="post-item-stats">
+      <span>👁 <span class="pv-reading-list">--</span> 次</span>
+      <span>💬 <span class="cm-reading-list">--</span> 条评论</span>
+    </div></li>
   </ul>
 </div>
 
 <footer class="site-footer">
   <p>&copy; 2026 选矿工程师笔记. All rights reserved.</p>
 </footer>
+
+  <script>
+    var pages = ["ore-density-table","what-is-mineral-processing","common-ores","grinding-overview","reading-list"];
+    pages.forEach(function(p) {
+      fetch("https://simon899.goatcounter.com/counter/posts/" + p + ".html.json")
+        .then(function(r) { if (r.ok || r.status === 404) return r.json(); throw Error(); })
+        .then(function(d) { var els = document.getElementsByClassName("pv-" + p); for (var i=0;i<els.length;i++) els[i].textContent = d.count || 0; })
+        .catch(function() { var els = document.getElementsByClassName("pv-" + p); for (var i=0;i<els.length;i++) els[i].textContent = "--"; });
+    });
+    fetch("https://api.github.com/repos/simon899/simon899.github.io/issues?labels=comment&state=all")
+      .then(function(r) { return r.json(); })
+      .then(function(issues) {
+        pages.forEach(function(p) {
+          var issue = null;
+          for (var i=0;i<issues.length;i++) {
+            if (issues[i].title === "posts/" + p + ".html") { issue = issues[i]; break; }
+          }
+          if (!issue) return;
+          var els = document.getElementsByClassName("cm-" + p);
+          for (var i=0;i<els.length;i++) els[i].textContent = issue.comments;
+        });
+      });
+  </script>
 </body>
 </html>
+
 
 
 
