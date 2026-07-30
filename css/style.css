@@ -445,3 +445,18 @@ body {
 
 
 
+
+
+.hero { margin-bottom: 20px; }
+.hero h1 { font-size: 1.3rem; margin-bottom: 6px; }
+.hero p { font-size: 0.9rem; }
+.section-title { font-size: 1rem; margin-bottom: 10px; }
+.post-item { padding: 8px 0; }
+.post-item h2 { font-size: 1rem; margin: 2px 0; }
+.post-excerpt { font-size: 0.82rem; margin: 2px 0; }
+.post-meta { font-size: 0.75rem; }
+.post-tags { margin: 2px 0; }
+.post-item-stats { padding: 0 0 2px; font-size: 0.75rem; gap: 12px; }
+.page-wrap-wide { padding: 20px 24px 40px; }
+.site-total-stats { display: flex; gap: 20px; padding: 0 0 12px; font-size: 0.85rem; color: #6b6b6b; }
+.site-total-stats strong { color: #8b5e3c; font-weight: 700; }
