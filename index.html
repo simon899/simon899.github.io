@@ -32,6 +32,19 @@
   <h2 class="section-title">最新文章</h2>
   <ul class="post-list">
     <li class="post-item">
+      <a href="posts/mesh-conversion-table.html">
+        <div class="post-meta">2026年7月</div>
+        <h2>目数-毫米-微米换算表</h2>
+        <div class="post-excerpt">从8目到1200目的标准筛目数与毫米、微米换算对照表，涵盖40余个粒度级别，磨矿分级必查工具。</div>
+        <div class="post-tags"><span class="tag">基础数据</span></div>
+      </a>
+      <div class="post-item-stats">
+        <span>👁 <span class="pv-mesh-conversion-table">--</span> 次</span>
+        <span>💬 <span class="cm-mesh-conversion-table">--</span> 条评论</span>
+      </div>
+    </li>
+
+    <li class="post-item">
       <a href="posts/ore-classification.html">
         <div class="post-meta">2026年7月</div>
         <h2>常见矿石矿物分类</h2>
@@ -113,7 +126,7 @@
 </footer>
 
   <script>
-    var pages = ["ore-classification","ore-density-table","what-is-mineral-processing","common-ores","grinding-overview","reading-list"];
+    var pages = ["mesh-conversion-table","ore-classification","ore-density-table","what-is-mineral-processing","common-ores","grinding-overview","reading-list"];
     pages.forEach(function(p) {
       fetch("https://simon899.goatcounter.com/counter/posts/" + p + ".html.json")
         .then(function(r) { if (r.ok || r.status === 404) return r.json(); throw Error(); })
