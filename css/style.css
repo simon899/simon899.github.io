@@ -83,7 +83,9 @@ body {
   margin: 0 auto;
   padding: 48px 24px 80px;
 }
-.hero {\n  margin-bottom: 24px;\n}
+.hero {
+  margin-bottom: 24px;
+}
 .hero h1 {
   font-size: 2rem;
   font-weight: 700;
@@ -95,30 +97,26 @@ body {
   color: var(--color-text-muted);
   max-width: 560px;
 }
-.section-title {\n  font-size: 1.1rem;\n  font-weight: 600;\n  margin-bottom: 12px;\n  color: var(--color-text);\n}
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--color-text);
+}
 .post-list {
   list-style: none;
 }
-.post-item {\n  padding: 12px 0;\n  border-bottom: 1px solid var(--color-border);\n  list-style: none;\n}
-.post-item:hover { padding-left: 4px; transition: padding 0.15s; }
-.post-item a {\n  display: block;\n  text-decoration: none;\n  color: inherit;\n}
+
+
+
 .post-meta {
   font-size: 0.8rem;
   color: var(--color-text-muted);
   margin-bottom: 6px;
 }
-.post-item h2 {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-  line-height: 1.4;
-}
-.post-item h2 a {
-  color: var(--color-text);
-}
-.post-item h2 a:hover {
-  color: var(--color-accent);
-}
+
+
+
 .post-excerpt {
   font-size: 0.92rem;
   color: var(--color-text-muted);
@@ -278,7 +276,7 @@ body {
   .hero h1 { font-size: 1.5rem; }
   .post-header h1 { font-size: 1.35rem; }
   .post-content { font-size: 1rem; }
-  .post-item {\n  padding: 12px 0;\n  border-bottom: 1px solid var(--color-border);\n  list-style: none;\n}
+  
   .about-section { padding: 24px; }
 }
 
@@ -385,10 +383,26 @@ body {
   gap: 4px;
 }
 /* ===== Homepage per-article stats ===== */
-.post-item-stats {\n  padding: 2px 0 6px;\n  display: flex;\n  gap: 16px;\n  font-size: 0.8rem;\n  color: var(--color-text-muted);\n}
-.post-item {\n  padding: 12px 0;\n  border-bottom: 1px solid var(--color-border);\n  list-style: none;\n}
+.post-item-stats {
+  padding: 2px 0 6px;
+  display: flex;
+  gap: 16px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+.post-item {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+  list-style: none;
+}
 .post-item:hover { padding-left: 4px; transition: padding 0.15s; }
+.post-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
 .post-item a {\n  display: block;\n  text-decoration: none;\n  color: inherit;\n}
+
 
 .download-box {
   background: #f0f4f8;
@@ -428,4 +442,5 @@ body {
   color: #fff;
   font-weight: 600;
 }
+
 
