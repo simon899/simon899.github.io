@@ -71,42 +71,6 @@
     </div></li>
 
     <li class="post-item">
-      <a href="posts/what-is-mineral-processing.html">
-        <div class="post-meta">2026年7月 | 文章</div>
-        <h2>选矿是什么？选矿到底是一个什么概念？</h2>
-        <div class="post-excerpt">1分钟带你了解选矿的基本概念。</div>
-        <div class="post-tags"><span class="tag">基础知识</span></div>
-      </a>
-    
-    <div class="post-item-stats">
-      <span>👁 <span class="pv-what-is-mineral-processing">--</span> 次</span>
-      <span>💬 <span class="cm-what-is-mineral-processing">--</span> 条评论</span>
-    </div></li>
-    <li class="post-item">
-      <a href="posts/common-ores.html">
-        <div class="post-meta">2026年7月 | 文章</div>
-        <h2>常见的矿石有哪些，它们的选别方法是什么？</h2>
-        <div class="post-excerpt">了解不同类型矿石的选别特点。</div>
-        <div class="post-tags"><span class="tag">矿石类型</span></div>
-      </a>
-    
-    <div class="post-item-stats">
-      <span>👁 <span class="pv-common-ores">--</span> 次</span>
-      <span>💬 <span class="cm-common-ores">--</span> 条评论</span>
-    </div></li>
-    <li class="post-item">
-      <a href="posts/grinding-overview.html">
-        <div class="post-meta">2026年7月 | 文章</div>
-        <h2>破碎与磨矿概述 - 破碎比是什么概念</h2>
-        <div class="post-excerpt">破碎和磨矿在选矿工艺中的基础知识。</div>
-        <div class="post-tags"><span class="tag">破碎磨矿</span></div>
-      </a>
-    
-    <div class="post-item-stats">
-      <span>👁 <span class="pv-grinding-overview">--</span> 次</span>
-      <span>💬 <span class="cm-grinding-overview">--</span> 条评论</span>
-    </div></li>
-    <li class="post-item">
       <a href="posts/reading-list.html">
         <div class="post-meta">2026年7月 | 文章</div>
         <h2>矿物加工入门推荐书单 - 5本经典教材推荐</h2>
@@ -126,7 +90,7 @@
 </footer>
 
   <script>
-    var pages = ["mesh-conversion-table","ore-classification","ore-density-table","what-is-mineral-processing","common-ores","grinding-overview","reading-list"];
+    var pages = ["mesh-conversion-table","ore-classification","ore-density-table","reading-list"];
     pages.forEach(function(p) {
       fetch("https://simon899.goatcounter.com/counter/posts/" + p + ".html.json")
         .then(function(r) { if (r.ok || r.status === 404) return r.json(); throw Error(); })
@@ -149,6 +113,7 @@
   </script>
 </body>
 </html>
+
 
 
 
