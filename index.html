@@ -29,6 +29,11 @@
     <h1>每次做完试验，都是一次新发现</h1>
     <p>这里记录我在选矿试验中的实战经验，从基础知识到工作体会，欢迎交流。</p>
   </section>
+  
+  <div class="site-total-stats">
+    <span>👁 总访问量: <strong id="total-views">--</strong> 次</span>
+    <span>💬 总评论数: <strong id="total-comments">--</strong> 条</span>
+  </div>
   <h2 class="section-title">最新文章</h2>
   <ul class="post-list">
     <li class="post-item">
@@ -123,6 +128,17 @@
           for (var i=0;i<els.length;i++) els[i].textContent = issue.comments;
         });
       });
+  </script>
+
+  <script>
+    fetch("https://simon899.goatcounter.com/counter/.json")
+      .then(function(r){if(r.ok||r.status===404)return r.json();throw Error()})
+      .then(function(d){var e=document.getElementById("total-views");if(e)e.textContent=d.count||0})
+      .catch(function(){});
+    fetch("https://api.github.com/repos/simon899/simon899.github.io/issues?labels=comment&state=all")
+      .then(function(r){return r.json()})
+      .then(function(issues){var t=0;for(var i=0;i<issues.length;i++)t+=issues[i].comments;var e=document.getElementById("total-comments");if(e)e.textContent=t})
+      .catch(function(){});
   </script>
 </body>
 </html>
