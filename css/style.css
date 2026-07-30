@@ -401,7 +401,7 @@ body {
   text-decoration: none;
   color: inherit;
 }
-.post-item a {\n  display: block;\n  text-decoration: none;\n  color: inherit;\n}
+
 
 
 .download-box {
@@ -442,5 +442,6 @@ body {
   color: #fff;
   font-weight: 600;
 }
+
 
 
