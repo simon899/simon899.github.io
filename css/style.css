@@ -83,9 +83,7 @@ body {
   margin: 0 auto;
   padding: 48px 24px 80px;
 }
-.hero {
-  margin-bottom: 48px;
-}
+.hero {\n  margin-bottom: 24px;\n}
 .hero h1 {
   font-size: 2rem;
   font-weight: 700;
@@ -97,34 +95,13 @@ body {
   color: var(--color-text-muted);
   max-width: 560px;
 }
-.section-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--color-accent);
-  margin-bottom: 24px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--color-border);
-}
+.section-title {\n  font-size: 1.1rem;\n  font-weight: 600;\n  margin-bottom: 12px;\n  color: var(--color-text);\n}
 .post-list {
   list-style: none;
 }
-.post-item {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
-  padding: 24px 28px;
-  margin-bottom: 16px;
-  transition: border-color 0.15s, box-shadow 0.15s;
-}
-.post-item:hover {
-  border-color: var(--color-accent-light);
-  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
-}
-.post-item a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
+.post-item {\n  padding: 12px 0;\n  border-bottom: 1px solid var(--color-border);\n  list-style: none;\n}
+.post-item:hover { padding-left: 4px; transition: padding 0.15s; }
+.post-item a {\n  display: block;\n  text-decoration: none;\n  color: inherit;\n}
 .post-meta {
   font-size: 0.8rem;
   color: var(--color-text-muted);
@@ -301,7 +278,7 @@ body {
   .hero h1 { font-size: 1.5rem; }
   .post-header h1 { font-size: 1.35rem; }
   .post-content { font-size: 1rem; }
-  .post-item { padding: 18px 20px; }
+  .post-item {\n  padding: 12px 0;\n  border-bottom: 1px solid var(--color-border);\n  list-style: none;\n}
   .about-section { padding: 24px; }
 }
 
@@ -408,28 +385,10 @@ body {
   gap: 4px;
 }
 /* ===== Homepage per-article stats ===== */
-.post-item-stats {
-  padding: 6px 20px 10px;
-  display: flex;
-  gap: 16px;
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
-}
-.post-item {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: box-shadow 0.15s;
-  list-style: none;
-}
-.post-item:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-.post-item a {
-  display: block;
-  padding: 16px 20px 8px;
-  text-decoration: none;
-  color: inherit;
-}
+.post-item-stats {\n  padding: 2px 0 6px;\n  display: flex;\n  gap: 16px;\n  font-size: 0.8rem;\n  color: var(--color-text-muted);\n}
+.post-item {\n  padding: 12px 0;\n  border-bottom: 1px solid var(--color-border);\n  list-style: none;\n}
+.post-item:hover { padding-left: 4px; transition: padding 0.15s; }
+.post-item a {\n  display: block;\n  text-decoration: none;\n  color: inherit;\n}
 
 .download-box {
   background: #f0f4f8;
@@ -469,3 +428,4 @@ body {
   color: #fff;
   font-weight: 600;
 }
+
